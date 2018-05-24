@@ -1,6 +1,6 @@
 package bankaccount;
 
-
+//github pull test
 
 import com.mysql.jdbc.Connection;
 import static java.lang.Math.abs;
@@ -66,11 +66,11 @@ public class Access
         // Using the getCustID method to get the customer id from the username
         // and password.
         int custID = getCustID(user, pass);
-        // Using the getAcctId method to get the account id from the 
+        // Using the getAcctId method to get the account id from the
         // customer id and account type(Savings, Checking, Money Market)
         int fromAcct = getAcctID(custID, fromType);
 
-        // Using the balanceCheck method to get the balance of a account by 
+        // Using the balanceCheck method to get the balance of a account by
         // using the account ID
         double fromAccTrans = balanceCheck(fromAcct);
 
@@ -82,7 +82,7 @@ public class Access
             // removing money from the account the user wanted to transfer from
             transAccess(fromAcct, (-1 * amount), "Transfer");
 
-            // Using the getAcctId method to get the account id from the 
+            // Using the getAcctId method to get the account id from the
             // customer if and account type(Savings, Checking, Money Market)
             int toAcct = getAcctID(custID, toType);
 
@@ -144,7 +144,7 @@ public class Access
                 stateMint.executeUpdate(insertAcct);
                 // Getting account id with the customer id
                 int accID = getAcctID(custID, acct);
-                // Using the tranAccess method, that allows the money to be 
+                // Using the tranAccess method, that allows the money to be
                 // add or removed from a bank account, with just the account
                 // Id, amount to be transfered and the type of transaction
                 transAccess(accID, amt, "Deposit");
@@ -256,14 +256,14 @@ public class Access
             stateMint.executeUpdate(insertAcct);
             // Savings
             commit();
-            // Using the getAcctId method to get the account id from the 
+            // Using the getAcctId method to get the account id from the
             // customer id and account type(Savings, Checking, Money Market)
             int accID = getAcctID(custID, type);
 
             // Using the transAccess method to make the transaction and actually
             // Adding money to the newly created account
             transAccess(accID, amount, type);
-          
+
 
             System.out.println("Account Created");
         } catch (SQLException ex)
@@ -311,7 +311,7 @@ public class Access
         // Using the getCustID method to get the customer id from the username
         // and password.
         int custID = getCustID(user, pass);
-        // Using the getAcctId method to get the account id from the 
+        // Using the getAcctId method to get the account id from the
         // customer id and account type(Savings, Checking, Money Market)
         int acctID = getAcctID(custID, type);
 
@@ -378,7 +378,7 @@ public class Access
             // Going into the resultSet and finding the custID and saving it
             while (rs.next())
             {
-                // Get the integer that has the match table name(in our case 
+                // Get the integer that has the match table name(in our case
                 // cust_id)
                 custID = rs.getInt("cust_id");
             }
@@ -541,7 +541,7 @@ public class Access
 
     /**
     * Method creates all the tables, but only if the admin key entered matchs
-    * @param aL 
+    * @param aL
     */
     private void createTable(int aL)
     {
