@@ -1,7 +1,5 @@
 package bankaccount;
 
-//github pull
-
 import com.mysql.jdbc.Connection;
 import static java.lang.Math.abs;
 import java.sql.DatabaseMetaData;
