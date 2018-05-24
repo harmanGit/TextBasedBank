@@ -1,6 +1,6 @@
 package bankaccount;
 
-//github pull test
+//github pull
 
 import com.mysql.jdbc.Connection;
 import static java.lang.Math.abs;
